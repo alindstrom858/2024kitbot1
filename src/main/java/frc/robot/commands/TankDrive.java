@@ -8,15 +8,11 @@ import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.Constants;
 import frc.robot.Robot;
 
-/* You should consider using the more terse Command factories API instead https://docs.wpilib.org/en/stable/docs/software/commandbased/organizing-command-based.html#defining-commands */
 public class TankDrive extends Command {
-  /** Creates a new TankDrive. */
   public TankDrive() {
-    // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(Robot.driveTrain);
   }
 
-  // Called when the command is initially scheduled.
   @Override
   public void initialize() {}
 
@@ -25,7 +21,6 @@ public class TankDrive extends Command {
   public void execute() {
     double leftStickX = Robot.m_oi.GetDriverRawAxis(Constants.LEFT_STICK_X);
     double leftStickY = Robot.m_oi.GetDriverRawAxis(Constants.LEFT_STICK_Y);
-    //double rightStickY = Robot.m_oi.GetDriverRawAxis(Constants.RIGHT_STICK_Y);
 
     Robot.driveTrain.setLeftMotors(leftStickY-leftStickX);
     Robot.driveTrain.setRightMotors(leftStickY+leftStickX);

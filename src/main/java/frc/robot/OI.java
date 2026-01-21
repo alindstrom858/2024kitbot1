@@ -6,7 +6,6 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.XboxController;
 
-/** Add your docs here. */
 public class OI {
   private XboxController driveControl1 = new XboxController(Constants.X_BOX_1);
 
