@@ -21,7 +21,7 @@ public class TankDrive extends Command {
   public void execute() {
     double leftStickX = Robot.m_oi.GetDriverRawAxis(Constants.LEFT_STICK_X);
     double leftStickY = Robot.m_oi.GetDriverRawAxis(Constants.LEFT_STICK_Y);
-
+    
     Robot.driveTrain.setLeftMotors(leftStickY-leftStickX);
     Robot.driveTrain.setRightMotors(leftStickY+leftStickX);
   }
